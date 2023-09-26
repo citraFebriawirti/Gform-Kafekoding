@@ -12,6 +12,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
 
     <title>KafeKoding</title>
     <style>
@@ -21,16 +25,16 @@
         align-items: center;
         height: 100vh;
         background-color: #203e59;
+        font-family: Poppins;
       }
 
       .card {
         border-radius: 10px;
-
         text-align: center;
         padding: 20px;
         width: 800px;
         background: #f1f4f6;
-        box-shadow: 14px 14px 3px #cbced1;
+        box-shadow: 5px 5px 3px #cbced1;
       }
 
       .card-title {
@@ -51,17 +55,37 @@
         text-decoration: none;
         color: #007bff;
       }
+
+      /* media query */
+      @media (max-width: 575.98px) {
+        .card {
+          padding: 13px;
+          width: 350px;
+        }
+        .card-title {
+          font-size: 20px;
+        }
+        .card-text {
+          font-size: 12px;
+          text-align: justify;
+        }
+        p {
+          font-size: 10px;
+          color: #888;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="card">
       <div class="card-body">
-        <h1 class="card-title">Pendaftaran Peserta Kelas Kafekoding</h1>
+        <h1 class="card-title fw-bold">Pendaftaran Peserta Kelas Kafekoding</h1>
 
         <h3 class="card-text">
-          Selamat 🤩, anda berhasil melakukan pendaftaran sebagai peserta di kelas
-          Kafekoding. Untuk mendapatkan informasi lebih lanjut, silahkan ke grup
-          whatsapp melalui tautan berikut <br />
+          <span class="fw-bold">Selamat🤩,</span> anda berhasil melakukan
+          pendaftaran sebagai peserta di kelas Kafekoding. Untuk mendapatkan
+          informasi lebih lanjut, silahkan ke grup whatsapp melalui tautan
+          berikut
           <a href="  https://chat.whatsapp.com/Ll8lR4pUUOlGRsdk3WNgTN"
             >Group Whatsapp Peserta KafeKoding</a
           >

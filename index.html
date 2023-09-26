@@ -21,6 +21,7 @@
     <style>
       * {
         box-sizing: border-box;
+        font-family: Poppins;
       }
 
       body {
@@ -29,14 +30,14 @@
 
       form {
         margin: 100px auto;
-        font-family: Raleway;
+        font-family: Poppins;
         padding: 40px;
         width: 70%;
         min-width: 300px;
         border-radius: 12px;
         box-sizing: border-box;
         background: #f1f4f6;
-        box-shadow: 14px 14px 5px #cbced1;
+        box-shadow: 2px 2px 5px #cbced1;
       }
 
       h1 {
@@ -54,16 +55,17 @@
       }
 
       input {
-        padding: 10px;
+        padding: 50px;
         width: 100%;
         font-size: 17px;
-        font-family: Raleway;
+        font-family: Poppins;
         border: 1px solid #ccc;
         background: #ecf0f3;
-        border-radius: 15px;
-        box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
-        border: none;
+        border-radius: 12px;
+        /* box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white; */
+        border: 5;
         outline: none;
+        margin-bottom: 10px;
       }
 
       /* Mark input boxes that gets an error on validation: */
@@ -76,7 +78,8 @@
       /* Gaya untuk teks dalam elemen dengan class "tab" */
 
       .tab {
-        font-weight: bold;
+        font-weight: 500;
+        font-size: 14px;
         display: none;
         animation: fade 0.5s ease-in-out;
       }
@@ -112,11 +115,12 @@
         background-color: #203e59;
         color: #ffffff;
         border: none;
-        padding: 10px 30px;
-        font-size: 17px;
-        font-family: Raleway;
+        padding: 6px 25px;
+        font-size: 15px;
+        font-family: poppins;
         cursor: pointer;
         border-radius: 25px;
+        margin-top: 30px;
       }
 
       button:hover {
@@ -328,6 +332,38 @@
       .kelas_card_info p {
         margin: 5px 0;
         text-align: justify; /* Menjadikan teks sejajar (justify) */
+        font-weight: 500;
+        line-height: 20px;
+        font-family: Poppins;
+        letter-spacing: -0.5px;
+      }
+
+      /* media query */
+      @media (max-width: 575.98px) {
+        body {
+          font-size: 14px;
+        }
+        .container {
+          padding: 10px;
+        }
+        .title-h3 {
+          font-size: 25px;
+        }
+        .title-p {
+          font-size: 13px;
+        }
+        .title-h4 {
+          font-size: 17px;
+        }
+
+        form {
+          width: 90%;
+        }
+
+        .kelas_card_info {
+          font-size: 13px;
+          margin-top: 10px;
+        }
       }
     </style>
   </head>
@@ -335,14 +371,16 @@
     <div class="box-form">
       <div class="container-form">
         <form
-          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeQipx5qkKMV3gCq3wSsal1UXYa-Fixyk055nUOuE1tinw4zg/formResponse"
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScVtlrVHmvMMjH4f8tm023JHKzBJT8NBxzNXuFlszDv992OqA/formResponse"
           method="POST"
         >
           <div class="title">
             <img class="" src="/assets/Logo KafeKoding.svg" alt="" />
-            <h3 class="text-center fw-bolder">KAFE KODING</h3>
-            <h4 class="text-center">Pendaftaran Peserta Baru 2023/2024</h4>
-            <p class="text-center">
+            <h3 class="text-center fw-bolder title-h3">KAFE KODING</h3>
+            <h4 class="text-center title-h4">
+              Pendaftaran Peserta Baru 2023/2024
+            </h4>
+            <p class="text-center title-p">
               Untuk info lebih lanjut silahkan ditanyakan melalui instagram
               <a href="https://www.instagram.com/kafekoding/">kafekoding</a>
               atau di
@@ -352,7 +390,7 @@
           <!-- One "tab" for each step in the form: -->
           <div class="tab">
             <span class="required">Email </span>
-            <p>
+            <p class="pt-2">
               <input
                 type="email"
                 placeholder=""
@@ -361,7 +399,7 @@
               />
             </p>
             <span class="required">Nama Lengkap</span>
-            <p>
+            <p class="pt-2">
               <input
                 type="nama"
                 placeholder=""
@@ -370,7 +408,7 @@
               />
             </p>
             <span class="required">Asal Perguruan Tinggi</span>
-            <p>
+            <p class="pt-2">
               <input
                 type="nama"
                 placeholder=""
@@ -379,7 +417,7 @@
               />
             </p>
             <span class="required">NIM</span>
-            <p>
+            <p class="pt-2">
               <input
                 oninput="this.className = ''"
                 type="nama"
@@ -388,7 +426,7 @@
               />
             </p>
             <span class="required">Jurusan</span>
-            <p>
+            <p class="pt-2">
               <input
                 oninput="this.className = ''"
                 type="nama"
@@ -397,7 +435,7 @@
               />
             </p>
             <span class="required">Kontak Whatsapp</span>
-            <p>
+            <p class="pt-2">
               <input
                 oninput="this.className = ''"
                 type="nama"
@@ -411,7 +449,7 @@
             <div class="col-sm-12">
               <div class="kelas_content_area">
                 <div class="row">
-                  <div class="col-sm-4">
+                  <div class="col-sm-4 col-md-6 col-lg-4">
                     <div class="kelas_card_area">
                       <input
                         class="kelas_checkbox"
@@ -451,7 +489,7 @@
 
                   <!-- end of col3  -->
 
-                  <div class="col-sm-4">
+                  <div class="col-sm-4 col-md-6 col-lg-4">
                     <div class="kelas_card_area">
                       <input
                         class="kelas_checkbox"
@@ -487,7 +525,7 @@
                   </div>
                   <!-- end of col3  -->
 
-                  <div class="col-sm-4">
+                  <div class="col-sm-4 col-md-6 col-lg-4">
                     <div class="kelas_card_area">
                       <input
                         class="kelas_checkbox"
@@ -525,7 +563,7 @@
 
                   <div class="container">
                     <div class="row justify-content-center">
-                      <div class="col-sm-4">
+                      <div class="col-sm-4 col-md-6 col-lg-4">
                         <div class="kelas_card_area">
                           <input
                             class="kelas_checkbox"
@@ -561,7 +599,7 @@
                       </div>
                       <!-- end of col3  -->
 
-                      <div class="col-sm-4">
+                      <div class="col-sm-4 col-md-6 col-lg-4">
                         <div class="kelas_card_area">
                           <input
                             class="kelas_checkbox"
@@ -611,10 +649,10 @@
           <div style="overflow: auto">
             <div style="float: right">
               <button type="button" id="prevBtn" onclick="nextPrev(-1)">
-                Sebelumnya
+                Kembali
               </button>
               <button type="button" id="nextBtn" onclick="nextPrev(1)">
-                Selanjutnya
+                Lanjut
               </button>
             </div>
           </div>
@@ -644,9 +682,9 @@
         }
 
         if (n == x.length - 1) {
-          document.getElementById("nextBtn").innerHTML = "Kirim";
+          document.getElementById("nextBtn").innerHTML = "Daftar";
         } else {
-          document.getElementById("nextBtn").innerHTML = "Selanjutnya";
+          document.getElementById("nextBtn").innerHTML = "Lanjut";
         }
 
         fixStepIndicator(n);
@@ -660,6 +698,8 @@
           currentTab = currentTab + n;
           if (currentTab >= x.length) {
             submitForm();
+            window.location.href = "submit.html";
+            return false;
           }
           showTab(currentTab);
         }
@@ -672,7 +712,7 @@
 
           // Kirim data ke Google Forms
           fetch(
-            "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeQipx5qkKMV3gCq3wSsal1UXYa-Fixyk055nUOuE1tinw4zg/formResponse",
+            "https://docs.google.com/forms/u/0/d/e/1FAIpQLScVtlrVHmvMMjH4f8tm023JHKzBJT8NBxzNXuFlszDv992OqA/formResponse",
             {
               method: "POST",
               body: formData,
